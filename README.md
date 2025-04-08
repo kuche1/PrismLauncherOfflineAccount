@@ -1,7 +1,6 @@
 # PrismLauncherOfflineAccount
 
 Applies a patch to the prism launcher that enables the use of offline accounts.
-Based on https://github.com/Diegiwg/PrismLauncher-Cracked.
 
 # Build
 
@@ -19,3 +18,7 @@ You can check them here `https://aur.archlinux.org/packages/prismlauncher-git`.
 ## Build
 
 Just run `./build.sh`
+
+# Credits
+
+Based on https://github.com/PrismLauncher/PrismLauncher/compare/develop...Diegiwg:PrismLauncher-Cracked:develop.
