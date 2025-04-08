@@ -15,6 +15,7 @@
 		cd "$BUILD_DIR"
 
 		git clone --recursive https://github.com/PrismLauncher/PrismLauncher.git
+		# tested 2025.04.08: commit 734db2bedcb9ebd12667031e423d16fd1118a39f
 
 		cd PrismLauncher
 
