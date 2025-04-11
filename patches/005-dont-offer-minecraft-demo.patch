@@ -1,0 +1,24 @@
+diff --git a/launcher/LaunchController.cpp b/launcher/LaunchController.cpp
+index 11db45983..010d2cd08 100644
+--- a/launcher/LaunchController.cpp
++++ b/launcher/LaunchController.cpp
+@@ -131,18 +131,7 @@ void LaunchController::decideAccount()
+ 
+ bool LaunchController::askPlayDemo()
+ {
+-    QMessageBox box(m_parentWidget);
+-    box.setWindowTitle(tr("Play demo?"));
+-    box.setText(
+-        tr("This account does not own Minecraft.\nYou need to purchase the game first to play it.\n\nDo you want to play "
+-           "the demo?"));
+-    box.setIcon(QMessageBox::Warning);
+-    auto demoButton = box.addButton(tr("Play Demo"), QMessageBox::ButtonRole::YesRole);
+-    auto cancelButton = box.addButton(tr("Cancel"), QMessageBox::ButtonRole::NoRole);
+-    box.setDefaultButton(cancelButton);
+-
+-    box.exec();
+-    return box.clickedButton() == demoButton;
++    return false;
+ }
+ 
+ QString LaunchController::askOfflineName(QString playerName, bool demo, bool& ok)
