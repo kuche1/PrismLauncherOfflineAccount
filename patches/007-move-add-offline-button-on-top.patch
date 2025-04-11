@@ -1,0 +1,14 @@
+diff --git a/launcher/ui/pages/global/AccountListPage.ui b/launcher/ui/pages/global/AccountListPage.ui
+index c9b770ab2..4759e9061 100644
+--- a/launcher/ui/pages/global/AccountListPage.ui
++++ b/launcher/ui/pages/global/AccountListPage.ui
+@@ -52,8 +52,8 @@
+    <attribute name="toolBarBreak">
+     <bool>false</bool>
+    </attribute>
+-   <addaction name="actionAddMicrosoft"/>
+    <addaction name="actionAddOffline"/>
++   <addaction name="actionAddMicrosoft"/>
+    <addaction name="actionRefresh"/>
+    <addaction name="actionRemove"/>
+    <addaction name="actionSetDefault"/>
