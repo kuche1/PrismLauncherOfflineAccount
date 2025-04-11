@@ -1,0 +1,13 @@
+diff --git a/launcher/ui/pages/global/AccountListPage.cpp b/launcher/ui/pages/global/AccountListPage.cpp
+index 4b7dad914..54f5732b2 100644
+--- a/launcher/ui/pages/global/AccountListPage.cpp
++++ b/launcher/ui/pages/global/AccountListPage.cpp
+@@ -55,7 +55,7 @@ AccountListPage::AccountListPage(QWidget* parent) : QMainWindow(parent), ui(new
+     ui->setupUi(this);
+     ui->listView->setEmptyString(
+         tr("Welcome!\n"
+-           "If you're new here, you can select the \"Add Microsoft\" button to link your Microsoft account."));
++           "If you're new here, you can click the \"Add Offline\" button to add an account."));
+     ui->listView->setEmptyMode(VersionListView::String);
+     ui->listView->setContextMenuPolicy(Qt::CustomContextMenu);
+ 
