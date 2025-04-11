@@ -26,7 +26,10 @@
 
 		cd PrismLauncher
 
-		git apply "$HERE"/patches/*
+		git apply "$HERE"/patches/???-*
+
+		git add .
+		# not needed but it makes it easier for me to add new patches
 
 		cmake -S . -B build -G Ninja -DCMAKE_INSTALL_PREFIX=install
 		cmake --build build

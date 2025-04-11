@@ -1,0 +1,22 @@
+diff --git a/launcher/Application.cpp b/launcher/Application.cpp
+index 9ecde7bd2..52b391566 100644
+--- a/launcher/Application.cpp
++++ b/launcher/Application.cpp
+@@ -71,7 +71,6 @@
+ #include "ui/setupwizard/AutoJavaWizardPage.h"
+ #include "ui/setupwizard/JavaWizardPage.h"
+ #include "ui/setupwizard/LanguageWizardPage.h"
+-#include "ui/setupwizard/LoginWizardPage.h"
+ #include "ui/setupwizard/PasteWizardPage.h"
+ #include "ui/setupwizard/SetupWizard.h"
+ #include "ui/setupwizard/ThemeWizardPage.h"
+@@ -1135,9 +1134,6 @@ bool Application::createSetupWizard()
+             m_setupWizard->addPage(new ThemeWizardPage(m_setupWizard));
+         }
+ 
+-        if (login) {
+-            m_setupWizard->addPage(new LoginWizardPage(m_setupWizard));
+-        }
+         connect(m_setupWizard, &QDialog::finished, this, &Application::setupWizardFinished);
+         m_setupWizard->show();
+     }
