@@ -1,0 +1,24 @@
+diff --git a/launcher/SysInfo.cpp b/launcher/SysInfo.cpp
+index cfcf63805..c868ef659 100644
+--- a/launcher/SysInfo.cpp
++++ b/launcher/SysInfo.cpp
+@@ -56,11 +56,16 @@ int suitableMaxMem()
+     float totalRAM = (float)Sys::getSystemRam() / (float)Sys::mebibyte;
+     int maxMemoryAlloc;
+ 
+-    // If totalRAM < 6GB, use (totalRAM / 1.5), else 4GB
+-    if (totalRAM < (4096 * 1.5))
++    if (totalRAM < (4096 * 1.5)) // If totalRAM < 6GiB, use (totalRAM / 1.5)
+         maxMemoryAlloc = (int)(totalRAM / 1.5);
+-    else
++    else if (totalRAM < (1024 * 16)) // If (6GiB <= totalRAM < 16GiB), use 4GiB
+         maxMemoryAlloc = 4096;
++    else if (totalRAM < (1024 * 32)) // If (16GiB <= totalRAM < 32GiB), use 6GiB
++        maxMemoryAlloc = 6144;
++    else if (totalRAM < (1024 * 64)) // If (32GiB <= totalRAM < 64GiB), use 8GiB
++        maxMemoryAlloc = 8192;
++    else // If totalRAM >= 64GiB, use 12GiB
++        maxMemoryAlloc = 12288;
+ 
+     return maxMemoryAlloc;
+ }
